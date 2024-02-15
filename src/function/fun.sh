@@ -53,10 +53,6 @@ init_menu() {
         shift
     done
 
-    # description
-    local DESC=$1
-    shift
-
     local w_loop=true
     while true; do
         clear
@@ -67,6 +63,7 @@ init_menu() {
         done
 
         printf "=====================%8s=====================\n" "========"
+        echo "${DESC}"
 
         # functions
         echo -e "Please select (0~$((COUNT - 1))): "
